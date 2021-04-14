@@ -1,6 +1,7 @@
 let  WIDTH  = 580;
 let HEIGHT = 420;
 
+
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   background(255,0,0);
