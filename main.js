@@ -4,6 +4,7 @@ let HEIGHT = 420;
 function setup() {
   createCanvas(WIDTH, HEIGHT);
   background(255,0,0);
+  //test
 }
 
 function draw() {
