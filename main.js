@@ -1,19 +1,28 @@
 /** TODO:
+ * Raytracing collisions?
+ * 
  * Add points system
- * Add unitvector(vel)*speed on every bounce
+ * Add unitvector(vel)*speed on every bounce [x]
  *  so every bounce has same speed
  *  regardless of vector direction/size
  * Multiply speed by a bit for every bounce
  * 
+ * Different locations on paddle = different angle
+ * 
  * Add max rounds system (maybe not yet)
+ * Add multiple games at once (would allow for faster training) color could differentiate
  * 
  * Add AI to train
  * Actually train
  * 
  * Save/Load trained model
+ * 
+ * maybe menu screens
  */
 
-
+/** CHANGELOG:
+ * Changed pos, and velocity to vectors
+ */
 let WIDTH  = 560;
 let HEIGHT = 420;
 
@@ -49,11 +58,11 @@ function draw() {
     rect( (WIDTH / 2) - 2, ((i*HEIGHT)/20) + 7, WIDTH/105, HEIGHT/40 );
   }
 
-  // Update
+  // Draw objects
   paddles.forEach(paddle => paddle.draw())
   theBall.draw();
   
-  // Draw
+  // Update objects
   paddles.forEach(paddle => paddle.update())
   theBall.update( paddles );
 }
